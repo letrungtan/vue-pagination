@@ -2,7 +2,7 @@
 
 A simple pagination component for VueJS.
 
-<img src="https://raw.githubusercontent.com/letrungtan/vue-pagination/main/img/pagination.png" width="400" style="height:auto;" />
+<img src="https://raw.githubusercontent.com/letrungtan/vue-pagination/main/img/pagination.png" width="335" />
 
 ## Installation
 ### NPM
