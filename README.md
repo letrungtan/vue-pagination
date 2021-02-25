@@ -52,10 +52,10 @@ export default {
 
 | Name | Type | Description |
 | :---------------- | :-------- | :-------------------------------- |
-| `currentPage`     | `Number`  | Current page number **required**  |
-| `perPage`         | `Number`  | Number of item limit per page **required**  |
-| `totalItems  `    | `Number`  | Number of all item available **required**  |
+| `currentPage`     | `Number`  | Current page number. **required**  |
+| `perPage`         | `Number`  | Number of item limit per page. **required**  |
+| `totalItems  `    | `Number`  | Number of all item available. **required**  |
 | `@pageSelected`   | `Function`| The callback function when page selected. Return page number in parameter.  |
 | `prevText`        | `String`  | Text for the previous button. **default: Prev**  |
 | `nextText`        | `String`  | Text for the next button. **default: Next**  |
-| `maxSize`         | `Number`  | Max length of pagination **default: 5** |
+| `maxSize`         | `Number`  | Max length of pagination. **default: 5** |
