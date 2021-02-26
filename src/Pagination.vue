@@ -57,7 +57,7 @@ export default {
 			if (this.totalItems % this.perPage === 0) {
 				return this.totalItems / this.perPage;
 			}
-			return Math.floor( this.totalItems / this.perPage ) + 1;
+			return Math.floor(this.totalItems / this.perPage) + 1;
 		}
 	},
 	methods: {
@@ -70,28 +70,28 @@ export default {
 		init () {
 			let maxSize = this.maxSize;
 			var currentPage = Number(this.currentPage);
-			console.log('currentPage', currentPage)
+			console.log('currentPage', currentPage);
 			var lastPage =  Number(this.lastPage);
-			(maxSize>lastPage)? maxSize = lastPage : '';
-			var pos = Math.floor(maxSize/2) + 1;
+			(maxSize > lastPage)? maxSize = lastPage : '';
+			var pos = Math.floor( maxSize / 2 ) + 1;
 			var paginate = [];
-			for (var i = 0; i < maxSize; i++){
+			for (var i = 0; i < maxSize; i++) {
 				paginate[i] =  i+1;
 			}
-			if (currentPage>=pos){
-				for (var i = 0; i < maxSize; i++){
+			if (currentPage >= pos){
+				for (var i = 0; i < maxSize; i++) {
 					paginate[i] = currentPage + i - pos + 1;
 				}
 			}
-			if (currentPage>=pos && currentPage>lastPage-pos+1 ){
-				for (var i = 0; i < maxSize; i++){
-					paginate[i] = lastPage-maxSize+i+1;
+			if (currentPage >= pos && currentPage > lastPage-pos + 1) {
+				for (var i = 0; i < maxSize; i++) {
+					paginate[i] = lastPage - maxSize + i + 1;
 				}
 			}
 			console.log('paginate', paginate);
 			this.paginate = paginate;
 		},
-		checkshowPaginate() {
+		checkShowPaginate() {
 			if (this.totalItems > this.perPage) {
 				this.isShowPaginate = true;
 			} else {
@@ -101,20 +101,19 @@ export default {
 	},
 	mounted () {
 		this.init();
-		this.checkshowPaginate();
+		this.checkShowPaginate();
 	},
 	watch: {
 		'currentPage'() {
 			this.init();
-			console.log('currentPage', this.currentPage);
 		},
 		totalItems() {
 			this.init();
-			this.checkshowPaginate();
+			this.checkShowPaginate();
 		},
 		'perPage'() {
 			this.init();
-			this.checkshowPaginate();
+			this.checkShowPaginate();
 		}
 	}
 }

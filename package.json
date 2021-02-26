@@ -1,5 +1,5 @@
 {
-  "name": "vue-pagination",
+  "name": "@letrungtan/vue-pagination",
   "version": "1.0.0",
   "description": "Simple pagination for VueJS",
   "main": "dist/vue-pagination.js",
